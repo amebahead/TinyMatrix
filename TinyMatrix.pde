@@ -1,15 +1,16 @@
- //<>//
+//<>// //<>//
 SceneDelegate scene;
 
 SceneDelegate getSceneDelegate() {
 
   // PhysicsSceneDelegate  TO-DO: sim study contents
 
-  return new SnakeSceneDelegate();
+  // return new SnakeSceneDelegate();
+  return new PhysicsSceneDelegate();
 }
 
 void settings() {
-  scene = new SnakeSceneDelegate();
+  scene = getSceneDelegate();
   size(scene.getWidth(), scene.getHeight());
 }
 
@@ -21,6 +22,10 @@ void setup() {
 
 void draw() {
   scene.onUpdateWithDraw();
+
+  fill(0);
+  textSize(15);
+  text(frameRate, 5, 25);  // Specify a z-axis value
 }
 
 void keyPressed() {
