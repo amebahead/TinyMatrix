@@ -1,4 +1,4 @@
-//<>// //<>//
+//<>// //<>// //<>//
 SceneDelegate scene;
 
 SceneDelegate getSceneDelegate() {
@@ -23,7 +23,7 @@ void setup() {
 void draw() {
   scene.onUpdateWithDraw();
 
-  fill(0);
+  fill(120);
   textSize(15);
   text(frameRate, 5, 25);  // Specify a z-axis value
 }

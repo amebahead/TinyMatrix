@@ -75,8 +75,8 @@ class StringWarm {
     for (int i = 0; i < bodyNum - 1; i++) {
       float dx = (pos.get(i).x - pos.get(i + 1).x) * 0.9f;
       float dy = (pos.get(i).y - pos.get(i + 1).y) * 0.9f;
-      vel.get(i + 1).x = dx;
-      vel.get(i + 1).y = dy;
+      vel.get(i + 1).x += dx;
+      vel.get(i + 1).y += dy;
     }
   }
 
